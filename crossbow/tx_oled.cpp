@@ -3,13 +3,16 @@
 #define OLED_COL_COUNT 16
 
 TxOled::TxOled(void) {
-    U8X8_SSD1306_128X64_NONAME_HW_I2C _display(U8X8_PIN_NONE);
+    // U8X8_SSD1306_128X64_NONAME_HW_I2C _display(U8X8_PIN_NONE);
+    U8X8_SSD1306_128X64_NONAME_HW_I2C _display(16, 15, 4);
+    // U8X8_SSD1306_128X64_NONAME_HW_I2C _display(OLED_RST, OLED_SCL, OLED_SDA);
 }
 
 void TxOled::init() {
     _display.begin();
     _display.setFont(u8x8_font_pxplustandynewtv_f);
     _display.clear();
+    _display.print("Test"); // DEBUG
 }
 
 void TxOled::loop() {

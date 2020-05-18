@@ -58,9 +58,9 @@ enum dataStates {
     QSP_STATE_CRC_RECEIVED
 };
 
-#define PPM_INPUT_PIN       0 // Has to be one of Interrupt pins
+#define PPM_INPUT_PIN       12 // Has to be one of Interrupt pins
 
-#define TX_BUZZER_PIN A5
+#define TX_BUZZER_PIN 25
 
 #define PPM_FRAME_LENGTH 30500  //set the PPM frame length in microseconds (1ms = 1000µs)
 #define PPM_PULSE_LENGTH 300  //set the pulse length

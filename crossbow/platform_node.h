@@ -7,6 +7,8 @@
 #elif defined(ARDUINO_SAMD_FEATHER_M0)
 // Include EEPROM-like API for FlashStorage
 #include <FlashAsEEPROM.h>
+#elif ARDUINO_ARCH_ESP32
+#include <EEPROM.h>
 #endif
 
 #ifndef PLATFORM_NODE_H
